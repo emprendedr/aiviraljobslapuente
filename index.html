@@ -22,26 +22,27 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
+            padding: 1.5rem 1.8rem;
         }
 
-        /* ===== CABECERA ===== */
+        /* ===== CABECERA OPTIMIZADA PARA MÓVILES ===== */
         header {
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 2.5rem 1rem;
             background: rgba(0, 0, 0, 0.25);
             border-radius: 20px;
             margin-bottom: 2.5rem;
             border: 1px solid rgba(64, 224, 208, 0.3);
         }
         h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #40e0d0;
             text-shadow: 0 0 10px rgba(64, 224, 208, 0.5);
+            line-height: 1.2;
         }
         .tagline {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #b0e0e6;
             max-width: 800px;
             margin: 0 auto;
@@ -59,7 +60,7 @@
         }
         .section-title {
             color: #40e0d0;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             margin-bottom: 1.5rem;
             text-align: center;
         }
@@ -67,7 +68,7 @@
         /* ===== CONTENEDORES DE VIDEO ===== */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* Relación 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 10px;
@@ -111,7 +112,7 @@
             margin: 3rem 0;
         }
         .cta-title {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: #7fffd4;
         }
@@ -124,7 +125,7 @@
             margin-right: auto;
         }
 
-        /* ===== BOTONES PROFESIONALES ACTUALIZADOS ===== */
+        /* ===== BOTONES PROFESIONALES ===== */
         .whatsapp-button {
             display: inline-block;
             background: linear-gradient(90deg, #128C7E, #075E54);
@@ -175,7 +176,7 @@
             font-size: 1.1rem;
         }
 
-        /* ===== SECCIÓN: TU MATRIZ 3x8 ===== */
+        /* ===== SECCIÓN: TU MATRIZ 3x8 - CON TABLA OPTIMIZADA ===== */
         .income-section {
             background: rgba(15, 32, 39, 0.85);
             border-left: 6px solid #FFA500;
@@ -213,20 +214,34 @@
             position: absolute;
             left: 0;
         }
+        
+        /* CONTENEDOR DE TABLA CON DESPLAZAMIENTO HORIZONTAL EN MÓVILES */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 1rem;
+            -webkit-overflow-scrolling: touch;
+        }
+        
         .earnings-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem;
             background: rgba(255, 255, 255, 0.05);
+            min-width: 600px;
         }
         .earnings-table th, .earnings-table td {
             border: 1px solid #2c5364;
-            padding: 0.9rem;
+            padding: 0.8rem;
             text-align: center;
+            white-space: nowrap;
         }
         .earnings-table th {
             background-color: #1d4350;
             color: #7fffd4;
+            font-size: 0.9rem;
+        }
+        .earnings-table td {
+            font-size: 0.9rem;
         }
         .earnings-table .total-row {
             font-weight: bold;
@@ -234,14 +249,14 @@
             color: #FFD700;
         }
         .matrix-total {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #92fe9d;
             text-align: center;
             margin-top: 1.5rem;
             font-weight: bold;
         }
 
-        /* ===== ESTILOS PARA EL FOOTER ===== */
+        /* ===== ESTILOS PARA EL FOOTER ACTUALIZADO ===== */
         .footer-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -306,11 +321,6 @@
         .chatbot-icon:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(64, 224, 208, 0.6);
-        }
-        
-        .chatbot-icon img {
-            width: 30px;
-            height: 30px;
         }
         
         .chatbot-container {
@@ -490,28 +500,36 @@
             box-shadow: 0 5px 15px rgba(0, 201, 255, 0.3);
         }
 
-        /* ===== DISEÑO RESPONSIVE PARA MÓVILES ===== */
+        /* ===== DISEÑO RESPONSIVE MEJORADO ===== */
         @media (max-width: 768px) {
             .container { 
-                padding: 1rem 1.5rem; /* Márgenes mejorados para móviles */
+                padding: 1rem 1.2rem;
             }
             h1 { 
-                font-size: 2.2rem; 
-                padding: 0 10px; /* Evita que toque los bordes */
-            }
-            .tagline, .cta-subtitle { 
-                font-size: 1.1rem; 
+                font-size: 2rem;
+                line-height: 1.1;
                 padding: 0 5px;
             }
+            .tagline { 
+                font-size: 1.1rem; 
+                line-height: 1.3;
+            }
             .section { 
-                padding: 1.5rem; 
+                padding: 1.3rem; 
+            }
+            .section-title {
+                font-size: 1.5rem;
             }
             .cta-title { 
-                font-size: 1.8rem; 
+                font-size: 1.7rem; 
                 padding: 0 10px;
             }
+            .cta-subtitle {
+                font-size: 1.1rem;
+                padding: 0 5px;
+            }
             .register-button, .whatsapp-button {
-                padding: 1.1rem 2.5rem;
+                padding: 1rem 2rem;
                 font-size: 1.1rem;
                 width: 100%;
                 display: block;
@@ -520,21 +538,19 @@
             .features-grid { 
                 grid-template-columns: 1fr; 
             }
-            .earnings-table { 
-                font-size: 0.9rem; 
-            }
             .earnings-table th, .earnings-table td { 
-                padding: 0.6rem; 
+                padding: 0.5rem; 
+                font-size: 0.85rem;
             }
             .matrix-total { 
-                font-size: 1.5rem; 
+                font-size: 1.4rem; 
             }
             .chatbot-container {
-                width: calc(100% - 40px);
+                width: calc(100% - 30px);
                 height: 450px;
-                right: 20px;
-                left: 20px;
-                bottom: 20px;
+                right: 15px;
+                left: 15px;
+                bottom: 15px;
             }
             .chatbot-icon {
                 bottom: 15px;
@@ -543,11 +559,20 @@
                 height: 55px;
             }
         }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 0.8rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Cabecera con título y eslogan -->
+        <!-- Cabecera optimizada para móviles -->
         <header>
             <h1>Aiviraljobslapuente</h1>
             <p class="tagline">Deja que la IA Construya Tu Línea Descendente Mientras Tú Relajas</p>
@@ -627,44 +652,48 @@
                 <p>Los niveles 1–7 pueden pagar hasta <strong>$6,582/mes sin necesidad de patrocinar a nadie</strong>. Si añades el Nivel 8, la matriz completa suma <strong>$26,265 mensuales</strong>.</p>
 
                 <h4>Niveles 1–7 (Ganancias sin patrocinio)</h4>
-                <table class="earnings-table">
-                    <thead>
-                        <tr>
-                            <th>Nivel</th>
-                            <th>Miembros</th>
-                            <th>Comisión por Miembro</th>
-                            <th>Ingreso Mensual</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Nivel 1</td><td>3</td><td>$10</td><td>$30</td></tr>
-                        <tr><td>Nivel 2</td><td>9</td><td>$2</td><td>$18</td></tr>
-                        <tr><td>Nivel 3</td><td>27</td><td>$2</td><td>$54</td></tr>
-                        <tr><td>Nivel 4</td><td>81</td><td>$2</td><td>$162</td></tr>
-                        <tr><td>Nivel 5</td><td>243</td><td>$2</td><td>$486</td></tr>
-                        <tr><td>Nivel 6</td><td>729</td><td>$2</td><td>$1,458</td></tr>
-                        <tr><td>Nivel 7</td><td>2,187</td><td>$2</td><td>$4,374</td></tr>
-                        <tr class="total-row">
-                            <td colspan="3"><strong>TOTAL (Niveles 1-7)</strong></td>
-                            <td><strong>$6,582/mes</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table class="earnings-table">
+                        <thead>
+                            <tr>
+                                <th>Nivel</th>
+                                <th>Miembros</th>
+                                <th>Comisión por Miembro</th>
+                                <th>Ingreso Mensual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Nivel 1</td><td>3</td><td>$10</td><td>$30</td></tr>
+                            <tr><td>Nivel 2</td><td>9</td><td>$2</td><td>$18</td></tr>
+                            <tr><td>Nivel 3</td><td>27</td><td>$2</td><td>$54</td></tr>
+                            <tr><td>Nivel 4</td><td>81</td><td>$2</td><td>$162</td></tr>
+                            <tr><td>Nivel 5</td><td>243</td><td>$2</td><td>$486</td></tr>
+                            <tr><td>Nivel 6</td><td>729</td><td>$2</td><td>$1,458</td></tr>
+                            <tr><td>Nivel 7</td><td>2,187</td><td>$2</td><td>$4,374</td></tr>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>TOTAL (Niveles 1-7)</strong></td>
+                                <td><strong>$6,582/mes</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h4>Nivel 8 (Con solo 3 referidos personales)</h4>
-                <table class="earnings-table">
-                    <thead>
-                        <tr>
-                            <th>Nivel</th>
-                            <th>Miembros</th>
-                            <th>Comisión por Miembro</th>
-                            <th>Ingreso Mensual</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Nivel 8</td><td>6,561</td><td>$3</td><td>$19,683</td></tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table class="earnings-table">
+                        <thead>
+                            <tr>
+                                <th>Nivel</th>
+                                <th>Miembros</th>
+                                <th>Comisión por Miembro</th>
+                                <th>Ingreso Mensual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Nivel 8</td><td>6,561</td><td>$3</td><td>$19,683</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <p class="matrix-total">🔥 Total de Matriz Completa: $26,265/mes</p>
             </div>
@@ -695,7 +724,7 @@
             <div class="footer-content">
                 <!-- Información de contacto -->
                 <div class="footer-credit">
-                    <p>💡 <strong>Este sitio está asociado con Aiviraldownline</strong> para ayudarte a duplicarte más rápido en el negocio digital.</p>
+                    <p>💡 <strong>Este sitio promociona la oportunidad de AI Viral Downline de manera independiente.</strong></p>
                     <p><strong>Contacto:</strong> Reyna Sánchez</p>
                     <p class="highlight-contact">📧 <a href="mailto:reynasanchez4141@gmail.com">reynasanchez4141@gmail.com</a></p>
                     <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send?phone=16263913127&text=Hola%2C%20me%20ayuda%20con%20el%20paso%20a%20paso%20para%20afiliarme%20con%20Aiviraldownline%3F%20Soy%20" target="_blank">+1 (626) 391-3127</a></p>
@@ -704,7 +733,7 @@
                 <!-- Línea de derechos de autor -->
                 <div class="footer-bottom">
                     <p>Todos los derechos reservados © <span id="currentYear"></span> Aiviraljobslapuente.</p>
-                    <p>Este sitio está asociado al programa AI Viral Downline.</p>
+                    <p>Este sitio opera de manera independiente.</p>
                 </div>
             </div>
         </footer>
@@ -1009,7 +1038,7 @@
 
         // Auto-trigger welcome message on page load (after delay)
         setTimeout(() => {
-            if (Math.random() > 0.5) { // 50% chance
+            if (Math.random() > 0.5) {
                 const welcomeEvent = new CustomEvent('chatbotAutoWelcome');
                 document.dispatchEvent(welcomeEvent);
             }
