@@ -22,7 +22,7 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 1.5rem;
+            padding: 1.5rem 2rem;
         }
 
         /* ===== CABECERA ===== */
@@ -124,47 +124,49 @@
             margin-right: auto;
         }
 
-        /* ===== BOTONES ===== */
+        /* ===== BOTONES PROFESIONALES ACTUALIZADOS ===== */
         .whatsapp-button {
             display: inline-block;
-            background: linear-gradient(90deg, #25D366, #128C7E);
+            background: linear-gradient(90deg, #128C7E, #075E54);
             color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-            padding: 1rem 2.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 1rem 2.8rem;
             border-radius: 10px;
             text-decoration: none;
             margin: 1rem 0.5rem;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            border: 2px solid #0daa94;
+            box-shadow: 0 4px 10px rgba(18, 140, 126, 0.3);
         }
         .whatsapp-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
-            background: linear-gradient(90deg, #128C7E, #25D366);
+            border-color: #25D366;
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(90deg, #25D366, #128C7E);
         }
         
         .register-button {
             display: inline-block;
-            background: linear-gradient(90deg, #00c9ff, #92fe9d);
-            color: #0f2027;
-            font-weight: bold;
+            background: linear-gradient(90deg, #00a8ff, #0097e6);
+            color: white;
+            font-weight: 700;
             font-size: 1.3rem;
-            padding: 1.2rem 3.5rem;
-            border-radius: 50px;
+            padding: 1.3rem 4rem;
+            border-radius: 12px;
             text-decoration: none;
             margin: 1.5rem 0;
             border: none;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 201, 255, 0.4);
-            transition: all 0.3s ease;
+            box-shadow: 0 6px 0 #0078b3, 0 10px 25px rgba(0, 169, 255, 0.4);
+            transition: all 0.2s ease;
+            position: relative;
+            top: 0;
         }
         .register-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 201, 255, 0.6);
-            background: linear-gradient(90deg, #92fe9d, #00c9ff);
+            top: -3px;
+            box-shadow: 0 8px 0 #0078b3, 0 15px 30px rgba(0, 169, 255, 0.6);
+            background: linear-gradient(90deg, #0097e6, #00a8ff);
         }
         .risk-free {
             color: #98fb98;
@@ -239,30 +241,7 @@
             font-weight: bold;
         }
 
-        /* ===== SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) ===== */
-        .faq-section {
-            background: rgba(147, 112, 219, 0.1);
-            border-left: 6px solid #9370DB;
-        }
-        .faq-link-button {
-            display: inline-block;
-            background: linear-gradient(90deg, #9370DB, #BA55D3);
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-            padding: 1rem 2.5rem;
-            border-radius: 10px;
-            text-decoration: none;
-            margin-top: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        .faq-link-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(147, 112, 219, 0.5);
-            background: linear-gradient(90deg, #BA55D3, #9370DB);
-        }
-
-        /* ===== ESTILOS PARA EL FOOTER ACTUALIZADO ===== */
+        /* ===== ESTILOS PARA EL FOOTER ===== */
         .footer-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -513,23 +492,43 @@
 
         /* ===== DISEÑO RESPONSIVE PARA MÓVILES ===== */
         @media (max-width: 768px) {
-            .container { padding: 1rem; }
-            h1 { font-size: 2.2rem; }
-            .tagline, .cta-subtitle { font-size: 1.1rem; }
-            .section { padding: 1.5rem; }
-            .cta-title { font-size: 1.8rem; }
-            .register-button, .faq-link-button, .whatsapp-button {
-                padding: 1rem 2rem;
-                font-size: 1.1rem;
-                width: 90%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
+            .container { 
+                padding: 1rem 1.5rem; /* Márgenes mejorados para móviles */
             }
-            .features-grid { grid-template-columns: 1fr; }
-            .earnings-table { font-size: 0.9rem; }
-            .earnings-table th, .earnings-table td { padding: 0.6rem; }
-            .matrix-total { font-size: 1.5rem; }
+            h1 { 
+                font-size: 2.2rem; 
+                padding: 0 10px; /* Evita que toque los bordes */
+            }
+            .tagline, .cta-subtitle { 
+                font-size: 1.1rem; 
+                padding: 0 5px;
+            }
+            .section { 
+                padding: 1.5rem; 
+            }
+            .cta-title { 
+                font-size: 1.8rem; 
+                padding: 0 10px;
+            }
+            .register-button, .whatsapp-button {
+                padding: 1.1rem 2.5rem;
+                font-size: 1.1rem;
+                width: 100%;
+                display: block;
+                margin: 1rem auto;
+            }
+            .features-grid { 
+                grid-template-columns: 1fr; 
+            }
+            .earnings-table { 
+                font-size: 0.9rem; 
+            }
+            .earnings-table th, .earnings-table td { 
+                padding: 0.6rem; 
+            }
+            .matrix-total { 
+                font-size: 1.5rem; 
+            }
             .chatbot-container {
                 width: calc(100% - 40px);
                 height: 450px;
@@ -671,18 +670,6 @@
             </div>
         </section>
 
-        <!-- Sección: Preguntas y Respuestas Comunes (FAQ) -->
-        <section class="section faq-section">
-            <h2 class="section-title">¿Tienes más preguntas? Te tenemos cubierto</h2>
-            <p>Consulta nuestra sección completa de Preguntas Frecuentes (FAQ) para aclarar cualquier duda sobre el programa, pagos, el rol de Emily o cómo comenzar.</p>
-            <p>Encontrarás respuestas detalladas y claras a las preguntas más comunes que tienen nuestros miembros.</p>
-
-            <a href="faq-aiviral.html" class="faq-link-button" target="_blank">
-                📚 Ir a Preguntas Frecuentes (FAQ)
-            </a>
-            <p style="margin-top: 1rem; font-size: 0.9rem;"><em>Serás dirigido a nuestra página oficial de FAQ.</em></p>
-        </section>
-
         <!-- Sección de Llamado a la Acción (CTA) -->
         <section class="cta-section">
             <h2 class="cta-title">¡Desbloquea a Emily y Tu Prueba Gratuita de 7 Días!</h2>
@@ -747,10 +734,10 @@
             <!-- Messages will be inserted here by JavaScript -->
         </div>
         <div class="quick-replies" id="quickReplies">
+            <button class="quick-reply" data-reply="¿Cuánto cuesta?">¿Cuánto cuesta?</button>
+            <button class="quick-reply" data-reply="¿Dónde está la empresa?">Ubicación</button>
+            <button class="quick-reply" data-reply="¿Cómo automatizo?">¿Cómo automatizo?</button>
             <button class="quick-reply" data-reply="¿Qué es AI Viral Downline?">¿Qué es?</button>
-            <button class="quick-reply" data-reply="¿Cuánto puedo ganar?">¿Ganancias?</button>
-            <button class="quick-reply" data-reply="¿Cómo empiezo?">¿Cómo empiezo?</button>
-            <button class="quick-reply" data-reply="¿Necesito experiencia?">¿Experiencia?</button>
         </div>
         <div class="chatbot-input">
             <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta aquí..." autocomplete="off">
@@ -781,37 +768,49 @@
         const ctaButtons = document.getElementById('ctaButtons');
         const quickReplyButtons = document.querySelectorAll('.quick-reply');
 
-        // Chatbot Knowledge Base
+        // Chatbot Knowledge Base ACTUALIZADA con tus respuestas específicas
         const knowledgeBase = {
-            "hola": "¡Hola! Soy Emily, tu asistente de IA para AI Viral Downline. ¿En qué puedo ayudarte hoy? Puedo explicarte cómo funciona el sistema, cuánto puedes ganar, o cómo empezar tu prueba gratuita de 7 días.",
+            "hola": "¡Hola! Soy Emily, tu asistente de IA para AI Viral Downline. Puedo explicarte cómo funciona el sistema, los costos y cómo automatizar tu negocio. ¿En qué puedo ayudarte?",
             
-            "qué es ai viral downline": "🤖 **AI Viral Downline** es un sistema automatizado con inteligencia artificial que te ayuda a construir tu línea descendente mientras tú te relajas. El sistema:\n• Atrae prospectos automáticamente\n• Explica la oportunidad con IA\n• Responde preguntas 24/7\n• Guía el registro paso a paso\n• Cierra ventas por ti",
+            "suscripción": "La suscripción es de **$28 al mes**. 🎯 Esto incluye acceso completo al sistema de automatización, soporte de IA 24/7 y todas las herramientas para construir tu línea descendente. **¡Prueba gratis por 7 días para ver los beneficios y probar los servicios sin compromiso!**",
             
-            "cómo funciona": "✨ **Así funciona el sistema:**\n1. Te registras gratuitamente\n2. Obtienes tu enlace personalizado\n3. Compartes el enlace (o el sistema atrae personas por ti)\n4. Emily (la IA) explica todo a tus prospectos\n5. El sistema cierra las ventas automáticamente\n6. Tú recibes comisiones por cada activación\n\nLa matriz 3x8 genera ingresos residuales desde el primer mes.",
+            "cuánto cuesta": "La inversión mensual es de **$28**. Tienes una **prueba gratuita de 7 días** para probar todas las funciones antes de decidir. El pago es automático desde tus ganancias una vez que comiences a generar ingresos.",
             
-            "cuánto gano": "💰 **Estructura de ganancias:**\n\n• **Bono rápido:** $25 por cada referencia directa\n• **Matriz 3x8:** Comisiones mensuales:\n   - Nivel 1: $10 por miembro (3 spots = $30/mes)\n   - Niveles 2-7: $2 por miembro (sin necesidad de referir)\n   - Nivel 8: $3 por miembro (con 3 referidos)\n\n🎯 **Potencial total:** Hasta $26,265/mes con matriz completa\n💡 **Con solo 3 personas en Nivel 1, tu membresía se paga sola**",
+            "28": "✅ Correcto, son **$28 al mes** después de tu prueba gratuita de 7 días. Durante la prueba podrás ver todos los beneficios y probar los servicios completos.",
             
-            "cuánto cuesta": "💳 **Inversión:**\n• Prueba gratuita: 7 días completos\n• Después: $28/mes (se paga automáticamente desde tus ganancias)\n• **¡CERO riesgo!** Si no ganas suficiente, puedes pagar manualmente o cancelar.\n\nLa membresía mantiene activas todas las automatizaciones y el soporte de Emily.",
+            "dónde está": "📍 **La empresa está ubicada en:**\nAI Viral Downline LLC\n7261 Tamarack RD\nPlymouth IN 46563\n📧 Email: admin@aiviraldownline.com",
             
-            "necesito experiencia": "❌ **NO necesitas experiencia previa.** El sistema está diseñado para:\n• Principiantes completos\n• Personas sin conocimientos técnicos\n• Quienes no tienen tiempo para crear contenido\n• Cualquier persona con ganas de ganar dinero online\n\nEmily hace TODO el trabajo por ti: explica, responde preguntas y cierra ventas.",
+            "ubicada": "📍 **La empresa está ubicada en:**\nAI Viral Downline LLC\n7261 Tamarack RD\nPlymouth IN 46563\n📧 Email: admin@aiviraldownline.com",
+            
+            "automatizo": "🔄 **Para automatizar tu negocio:**\n1. **Apalancamiento del Sistema:** A medida que se suman suscriptores a tu línea descendente, el sistema trabaja por ti.\n2. **IA Emily:** Atiende preguntas y cierra ventas 24/7.\n3. **Ingresos Pasivos:** Generas comisiones de toda tu red automáticamente.\n\nComenzando con 3 referidos, tu membresía se paga sola y el sistema escala por ti.",
+            
+            "automatizar": "🔄 **Tienes varias formas de automatizar:**\n1. A través del crecimiento de la misma red, según se vayan sumando suscriptores después de ti en tu línea descendente.\n2. Podrás ir automatizando tus ingresos a través del apalancamiento del sistema.\n3. La IA Emily trabaja 24/7 explicando, respondiendo y cerrando por ti.",
+            
+            "qué es": "🤖 **AI Viral Downline** es una plataforma de automatización con inteligencia artificial diseñada para ayudar a personas a promocionar oportunidades digitales, atraer prospectos y generar ingresos en línea, **incluso sin experiencia previa**.",
+            
+            "qué es ai viral downline": "🤖 **AI Viral Downline** es una plataforma de automatización con inteligencia artificial diseñada para ayudar a personas a promocionar oportunidades digitales, atraer prospectos y generar ingresos en línea, **incluso sin experiencia previa**.",
+            
+            "creadores": "👥 **Los creadores son Jeremy Duncan y Kenneth Wasiewicz**, con más de **40 años de experiencia combinada** en la industria del marketing digital y network. Su expertise garantiza un sistema robusto y efectivo.",
+            
+            "jeremy": "👨‍💼 **Jeremy Duncan** es co-creador de AI Viral Downline con más de 20 años de experiencia en marketing digital y sistemas de automatización.",
+            
+            "kenneth": "👨‍💼 **Kenneth Wasiewicz** es co-creador de AI Viral Downline con más de 20 años de experiencia en desarrollo de plataformas digitales y negocios en línea.",
+            
+            "ganar": "💰 **Puedes ganar a través de:**\n• $25 por cada referencia directa (Bono Rápido)\n• Comisiones de matriz 3x8 ($6,582/mes niveles 1-7)\n• Hasta $26,265/mes con matriz completa\n• Spillover automático (personas colocadas en tu equipo sin referirlas)",
             
             "cómo empiezo": "🚀 **Para empezar es muy fácil:**\n1. Haz clic en '¡Regístrate Gratis!'\n2. Completa el formulario rápido (2 minutos)\n3. Activa tu cuenta gratuita\n4. Accede al entrenamiento paso a paso\n5. Comienza a compartir tu enlace\n\n¿Te gustaría que te envíe el enlace de registro ahora mismo?",
             
-            "es legal": "✅ **Sí, 100% legal.**\n• Empresa registrada en Indiana, USA\n• Modelo de membresía y afiliación\n• Pagos reportados correctamente\n• Sistema transparente y verificable\n• Creadores con reputación comprobada\n\nEs un modelo de negocio digital totalmente legítimo.",
-            
-            "spillover": "🔄 **Spillover (Derrame):** Es cuando el sistema coloca personas automáticamente debajo de ti en la matriz, **incluso si no las referiste personalmente.**\n\nEsto significa que puedes ganar comisiones de personas que el sistema atrae y coloca en tu equipo automáticamente.",
-            
-            "celular": "📱 **Sí, funciona 100% en celular.**\nPuedes manejar todo tu negocio desde:\n• Tu smartphone\n• Tablet\n• Cualquier dispositivo móvil\n\nNo necesitas computadora. El sistema está optimizado para móviles.",
-            
-            "tiempo": "⏰ **Tiempo requerido:**\n• Inicio: 30-60 minutos diarios\n• Una vez automatizado: 10-15 minutos diarios\n• El sistema trabaja 24/7 por ti\n\nEmily atiende a tus prospectos mientras tú duermes, trabajas o te relajas.",
-            
             "registro": "🎯 **Para registrarte ahora:**\n1. Visita: https://aiviraldownline.com/lc.php?id=ialapuente1\n2. Completa el formulario\n3. Confirma tu email\n4. ¡Listo! Comienza tu prueba gratuita\n\n¿Quieres que te guíe paso a paso?",
             
-            "gracias": "¡De nada! 😊 Estoy aquí para ayudarte en cualquier momento. ¿Hay algo más en lo que pueda asistirte? Recuerda que tienes una prueba gratuita de 7 días esperándote.",
+            "matriz": "📊 **Matriz 3x8:**\n• Nivel 1: 3 spots = $30/mes (se paga tu membresía)\n• Niveles 2-7: $2 por miembro = $6,552/mes (sin referir)\n• Nivel 8: $3 por miembro = $19,683/mes (con 3 referidos)\n• **Total posible: $26,265/mes**",
             
-            "adiós": "¡Hasta luego! 👋 Recuerda que puedes volver a hablar conmigo cuando quieras. No olvides tu prueba gratuita de 7 días - es una oportunidad increíble para comenzar sin riesgo.",
+            "spillover": "🔄 **Spillover (Derrame):** Es cuando el sistema coloca personas automáticamente debajo de ti en la matriz, **incluso si no las referiste personalmente.** Esto significa ingresos pasivos sin esfuerzo adicional.",
             
-            "default": "🤔 No estoy seguro de entender tu pregunta. Podrías reformularla o elegir una de estas opciones:\n• ¿Qué es AI Viral Downline?\n• ¿Cuánto puedo ganar?\n• ¿Cómo funciona la matriz 3x8?\n• ¿Cómo empiezo mi prueba gratuita?\n\n¡Estoy aquí para ayudarte!"
+            "gracias": "¡De nada! 😊 Estoy aquí para ayudarte en cualquier momento. ¿Te gustaría saber más sobre cómo comenzar tu prueba gratuita de 7 días?",
+            
+            "adiós": "¡Hasta luego! 👋 Recuerda que puedes volver a hablar conmigo cuando quieras. Tu prueba gratuita de 7 días te espera.",
+            
+            "default": "🤔 ¿Podrías reformular tu pregunta? Te puedo ayudar con:\n• Costos ($28/mes con prueba gratis)\n• Ubicación de la empresa (Indiana, USA)\n• Cómo automatizar tu negocio\n• Qué es AI Viral Downline\n• Información de los creadores (40+ años experiencia)"
         };
 
         // Chatbot Responses with Sales Triggers
@@ -822,7 +821,9 @@
             "me interesa": true,
             "quiero registrarme": true,
             "prueba gratuita": true,
-            "quiero la prueba": true
+            "quiero la prueba": true,
+            "comenzar": true,
+            "empezar": true
         };
 
         // Initial Bot Message
@@ -835,7 +836,7 @@
             
             if (!initialMessageShown) {
                 setTimeout(() => {
-                    addBotMessage("¡Hola! 👋 Soy **Emily**, tu asistente de IA para AI Viral Downline. Estoy aquí para responder todas tus preguntas y guiarte hacia tu prueba gratuita de 7 días. \n\n¿En qué puedo ayudarte hoy?");
+                    addBotMessage("¡Hola! 👋 Soy **Emily**, tu asistente de IA para AI Viral Downline. Puedo responder todas tus preguntas sobre costos, ubicación, automatización y cómo comenzar tu **prueba gratuita de 7 días**. \n\n¿En qué puedo ayudarte hoy?");
                     initialMessageShown = true;
                 }, 500);
             }
@@ -864,7 +865,7 @@
             setTimeout(() => {
                 chatbotMessages.removeChild(typingIndicator);
                 processMessage(message);
-            }, 1500);
+            }, 1000);
         }
 
         // Add User Message
@@ -905,33 +906,35 @@
             const lowerMessage = message.toLowerCase();
             let response = knowledgeBase.default;
             
-            // Check for exact matches
+            // Check for exact matches first
+            let found = false;
             for (const key in knowledgeBase) {
                 if (lowerMessage.includes(key)) {
                     response = knowledgeBase[key];
+                    found = true;
                     break;
                 }
             }
             
-            // Check for specific patterns
-            if (lowerMessage.includes('ganar') || lowerMessage.includes('dinero') || lowerMessage.includes('ganancia')) {
-                response = knowledgeBase["cuánto gano"];
-            } else if (lowerMessage.includes('cuesta') || lowerMessage.includes('precio') || lowerMessage.includes('inversión')) {
-                response = knowledgeBase["cuánto cuesta"];
-            } else if (lowerMessage.includes('experiencia') || lowerMessage.includes('principiante') || lowerMessage.includes('nuevo')) {
-                response = knowledgeBase["necesito experiencia"];
-            } else if (lowerMessage.includes('empezar') || lowerMessage.includes('comenzar') || lowerMessage.includes('iniciar')) {
-                response = knowledgeBase["cómo empiezo"];
-            } else if (lowerMessage.includes('legal') || lowerMessage.includes('confiable') || lowerMessage.includes('seguro')) {
-                response = knowledgeBase["es legal"];
-            } else if (lowerMessage.includes('spillover') || lowerMessage.includes('derrame') || lowerMessage.includes('automático')) {
-                response = knowledgeBase["spillover"];
-            } else if (lowerMessage.includes('celular') || lowerMessage.includes('móvil') || lowerMessage.includes('teléfono')) {
-                response = knowledgeBase["celular"];
-            } else if (lowerMessage.includes('tiempo') || lowerMessage.includes('horas') || lowerMessage.includes('dedicar')) {
-                response = knowledgeBase["tiempo"];
-            } else if (lowerMessage.includes('registrar') || lowerMessage.includes('inscribir') || lowerMessage.includes('unirme')) {
-                response = knowledgeBase["registro"];
+            // Check for specific patterns if no exact match
+            if (!found) {
+                if (lowerMessage.includes('$') || lowerMessage.includes('pesos') || lowerMessage.includes('precio') || lowerMessage.includes('cuesta') || lowerMessage.includes('suscripción') || lowerMessage.includes('pago') || lowerMessage.includes('inversión')) {
+                    response = knowledgeBase["cuánto cuesta"];
+                } else if (lowerMessage.includes('dirección') || lowerMessage.includes('ubicación') || lowerMessage.includes('direccion') || lowerMessage.includes('ubicacion') || lowerMessage.includes('dónde') || lowerMessage.includes('donde') || lowerMessage.includes('está') || lowerMessage.includes('esta')) {
+                    response = knowledgeBase["dónde está"];
+                } else if (lowerMessage.includes('automati') || lowerMessage.includes('funciona') || lowerMessage.includes('sistema') || lowerMessage.includes('trabaja')) {
+                    response = knowledgeBase["automatizar"];
+                } else if (lowerMessage.includes('qué es') || lowerMessage.includes('que es') || lowerMessage.includes('quees')) {
+                    response = knowledgeBase["qué es"];
+                } else if (lowerMessage.includes('creador') || lowerMessage.includes('jeremy') || lowerMessage.includes('kenneth') || lowerMessage.includes('wasiewicz')) {
+                    response = knowledgeBase["creadores"];
+                } else if (lowerMessage.includes('ganar') || lowerMessage.includes('dinero') || lowerMessage.includes('ganancia') || lowerMessage.includes('ingreso')) {
+                    response = knowledgeBase["ganar"];
+                } else if (lowerMessage.includes('matriz') || lowerMessage.includes('nivel') || lowerMessage.includes('3x8')) {
+                    response = knowledgeBase["matriz"];
+                } else if (lowerMessage.includes('spillover') || lowerMessage.includes('derrame') || lowerMessage.includes('automático')) {
+                    response = knowledgeBase["spillover"];
+                }
             }
             
             addBotMessage(response);
@@ -941,6 +944,18 @@
                 setTimeout(() => {
                     ctaButtons.style.display = 'flex';
                 }, 500);
+            }
+            
+            // Special case: after cost question, suggest registration
+            if (lowerMessage.includes('$') || lowerMessage.includes('cuesta') || lowerMessage.includes('28')) {
+                setTimeout(() => {
+                    const followUp = document.createElement('div');
+                    followUp.className = 'message bot-message';
+                    followUp.innerHTML = '¿Te gustaría comenzar tu <strong>prueba gratuita de 7 días</strong> para experimentar estos beneficios?';
+                    chatbotMessages.appendChild(followUp);
+                    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+                    ctaButtons.style.display = 'flex';
+                }, 1000);
             }
         }
 
@@ -969,11 +984,11 @@
                 setTimeout(() => {
                     chatbotMessages.removeChild(typingIndicator);
                     processMessage(reply);
-                }, 1500);
+                }, 1000);
             });
         });
 
-        // Auto-open chatbot after 10 seconds
+        // Auto-open chatbot after 8 seconds
         setTimeout(() => {
             if (!initialMessageShown && chatbotContainer.style.display !== 'flex') {
                 chatbotIcon.style.animation = 'pulse 2s infinite';
@@ -990,7 +1005,7 @@
                 `;
                 document.head.appendChild(style);
             }
-        }, 10000);
+        }, 8000);
 
         // Auto-trigger welcome message on page load (after delay)
         setTimeout(() => {
