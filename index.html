@@ -25,13 +25,70 @@
             padding: 1.5rem 1.8rem;
         }
 
+        /* ===== BOTÓN ENGLISH PRESENTATION ANIMADO ===== */
+        .english-presentation-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 1.5rem auto 2rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: pulse-glow 2s infinite alternate;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .english-presentation-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .english-presentation-btn:hover:before {
+            left: 100%;
+        }
+        
+        .english-presentation-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 0, 128, 0.6);
+            animation: none;
+        }
+        
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+                background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0);
+            }
+            100% {
+                box-shadow: 0 6px 25px rgba(64, 224, 208, 0.6);
+                background: linear-gradient(90deg, #40e0d0, #ff0080, #ff8c00);
+            }
+        }
+
         /* ===== CABECERA OPTIMIZADA PARA MÓVILES ===== */
         header {
             text-align: center;
             padding: 2.5rem 1rem;
             background: rgba(0, 0, 0, 0.25);
             border-radius: 20px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             border: 1px solid rgba(64, 224, 208, 0.3);
         }
         h1 {
@@ -82,6 +139,22 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+        
+        /* Estilo especial para el segundo video protegido */
+        .protected-video-wrapper {
+            position: relative;
+        }
+        .protected-video-wrapper:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 10px;
         }
 
         /* ===== LISTA DE FUNCIONES DE EMILY ===== */
@@ -505,6 +578,12 @@
             .container { 
                 padding: 1rem 1.2rem;
             }
+            .english-presentation-btn {
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
+                margin: 1rem auto;
+                width: 90%;
+            }
             h1 { 
                 font-size: 2rem;
                 line-height: 1.1;
@@ -567,11 +646,22 @@
             .container {
                 padding: 0.8rem 1rem;
             }
+            .english-presentation-btn {
+                font-size: 1rem;
+                padding: 0.9rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Botón English Presentation -->
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="english-presentation-btn" target="_blank">
+                📽️ English Presentation
+            </a>
+        </div>
+
         <!-- Cabecera optimizada para móviles -->
         <header>
             <h1>Aiviraljobslapuente</h1>
@@ -614,16 +704,20 @@
             </div>
         </section>
 
-        <!-- Segundo video (Presentación completa) -->
+        <!-- Segundo video (Presentación completa) - PROTEGIDO -->
         <section class="section">
             <h2 class="section-title">Presentación Completa del Sistema</h2>
-            <div class="video-wrapper">
-                <iframe src="https://m.youtube.com/watch?v=7_5J0zVVJeU"
+            <div class="video-wrapper protected-video-wrapper">
+                <iframe src="https://www.youtube-nocookie.com/embed/7_5J0zVVJeU?si=Rw3T8aJg_hmxlga0"
                         title="Presentación Completa del Programa AIViralDownline"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
             </div>
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #b0e0e6;">
+                ⚠️ Video protegido para mantener tu enfoque en la presentación
+            </p>
         </section>
 
         <!-- Sección: Tu Matriz 3x8 - Ingresos Residuales -->
@@ -710,7 +804,7 @@
                 💬 ¿Necesitas Ayuda? Escríbeme por WhatsApp
             </a>
             
-            <!-- Botón de Registro Principal -->
+            <!-- Botón de Registro Principal - ENLACE ACTUALIZADO -->
             <a href="https://aiviraldownline.com/lc.php?id=ialapuente1" class="register-button" target="_blank">
                 ¡COMIENZA TU PRUEBA GRATUITA DE 7 DÍAS!
             </a>
@@ -764,7 +858,7 @@
         </div>
         <div class="quick-replies" id="quickReplies">
             <button class="quick-reply" data-reply="¿Cuánto cuesta?">¿Cuánto cuesta?</button>
-            <button class="quick-reply" data-reply="¿Dónde está la empresa?">Ubicación</button>
+            <button class="quick-reply" data <button class="quick-reply" data-reply="¿Dónde está la empresa?">Ubicación</button>
             <button class="quick-reply" data-reply="¿Cómo automatizo?">¿Cómo automatizo?</button>
             <button class="quick-reply" data-reply="¿Qué es AI Viral Downline?">¿Qué es?</button>
         </div>
@@ -827,9 +921,9 @@
             
             "ganar": "💰 **Puedes ganar a través de:**\n• $25 por cada referencia directa (Bono Rápido)\n• Comisiones de matriz 3x8 ($6,582/mes niveles 1-7)\n• Hasta $26,265/mes con matriz completa\n• Spillover automático (personas colocadas en tu equipo sin referirlas)",
             
-            "cómo empiezo": "🚀 **Para empezar es muy fácil:**\n1. Haz clic en '¡Regístrate Gratis!'\n2. Completa el formulario rápido (2 minutos)\n3. Activa tu cuenta gratuita\n4. Accede al entrenamiento paso a paso\n5. Comienza a compartir tu enlace\n\n¿Te gustaría que te envíe el enlace de registro ahora mismo?",
+            "cómo empiezo": "🚀 **Para empezar es muy fácil:**\n1. Haz clic en '¡Regístrate Gratis!' o en 'English Presentation'\n2. Completa el formulario rápido (2 minutos)\n3. Activa tu cuenta gratuita\n4. Accede al entrenamiento paso a paso\n5. Comienza a compartir tu enlace\n\n¿Te gustaría que te envíe el enlace de registro ahora mismo?",
             
-            "registro": "🎯 **Para registrarte ahora:**\n1. Visita: https://aiviraldownline.com/lc.php?id=ialapuente1. Completa el formulario\n3. Confirma tu email\n4. ¡Listo! Comienza tu prueba gratuita\n\n¿Quieres que te guíe paso a paso?",
+            "registro": "🎯 **Para registrarte ahora:**\n1. Visita: https://aiviraldownline.com/lc.php?id=ialapuente1\n2. Completa el formulario\n3. Confirma tu email\n4. ¡Listo! Comienza tu prueba gratuita\n\n¿Quieres que te guíe paso a paso?",
             
             "matriz": "📊 **Matriz 3x8:**\n• Nivel 1: 3 spots = $30/mes (se paga tu membresía)\n• Niveles 2-7: $2 por miembro = $6,552/mes (sin referir)\n• Nivel 8: $3 por miembro = $19,683/mes (con 3 referidos)\n• **Total posible: $26,265/mes**",
             
@@ -852,7 +946,9 @@
             "prueba gratuita": true,
             "quiero la prueba": true,
             "comenzar": true,
-            "empezar": true
+            "empezar": true,
+            "english presentation": true,
+            "presentation": true
         };
 
         // Initial Bot Message
@@ -980,7 +1076,7 @@
                 setTimeout(() => {
                     const followUp = document.createElement('div');
                     followUp.className = 'message bot-message';
-                    followUp.innerHTML = '¿Te gustaría comenzar tu <strong>prueba gratuita de 7 días</strong> para experimentar estos beneficios?';
+                    followUp.innerHTML = '¿Te gustaría comenzar tu <strong>prueba gratuita de 7 días</strong> para experimentar estos beneficios? Puedes usar el botón "English Presentation" arriba o "Regístrate Gratis" abajo.';
                     chatbotMessages.appendChild(followUp);
                     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
                     ctaButtons.style.display = 'flex';
@@ -1048,6 +1144,27 @@
         document.addEventListener('chatbotAutoWelcome', () => {
             if (!initialMessageShown) {
                 chatbotIcon.click();
+            }
+        });
+        
+        // Detectar clics en enlaces de YouTube para evitar redirección directa
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.protected-video-wrapper')) {
+                e.preventDefault();
+                // Evita que los clics en el iframe de YouTube redirijan fuera de la página
+                return false;
+            }
+        });
+        
+        // Bloquear clic derecho en el video protegido
+        document.querySelector('.protected-video-wrapper iframe').addEventListener('load', function() {
+            try {
+                this.contentDocument.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+            } catch(e) {
+                // Error de cross-origin, pero el iframe de YouTube-nocookie ya limita la interacción
             }
         });
     </script>
